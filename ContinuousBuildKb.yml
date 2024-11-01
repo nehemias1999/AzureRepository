@@ -55,14 +55,11 @@ jobs:
     condition: always()
     steps:
       - script: >
-
-          '$(MSBUILD_PATH)' "$(WORKING_DIR)\\AzureCICD.msbuild" -target:CreateOrUpdateKB /p:WorkingDirectory=$(KB_PATH) /p:CreateDbInKbFolder=True
+          $(MSBUILD_PATH) "$(WORKING_DIR)\\AzureCICD.msbuild" -target:CreateOrUpdateKB /p:WorkingDirectory=$(KB_PATH) /p:CreateDbInKbFolder=True
           /p:DbaseName=$(KB_ALIAS) /p:DbaseUseIntegratedSecurity=True /p:ServerUrl=$(GXSERVER_URL) /p:ServerKbAlias=$(KB_ALIAS) 
           /p:ServerUsername=$(GXSERVER_USER) /p:ServerPassword=$(GXSERVER_PASS)
           
           set /p updateCount=<"$(KB_PATH)\\updateCount.txt"
-
-          #echo ##vso[task.setvariable variable=updateCount;isOutput=true]%updateCount%
         name: CreateOrUpdateKB
 
   # - job: BuildAndDeploy
