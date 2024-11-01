@@ -8,7 +8,7 @@ variables:
   EXEC_AGENT: "TestAgent"
 
   #Environment variables: 
-  MSBUILD_PATH: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin
+  MSBUILD_EXE: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe"
   GX_PATH: "C:\\Program Files (x86)\\GeneXus\\GeneXus18U9"
   WORKING_DIR: "C:\\Users\\nsalazar\\Documents\\Git\\Azure Pipelines\\AzureRepository"
   KB_PATH: C:\\KBS\\$(KB_ALIAS)
@@ -55,7 +55,7 @@ jobs:
     condition: always()
     steps:
       - script: >
-          "$(MSBUILD_PATH)" "$(WORKING_DIR)\\AzureCICD.msbuild" -target:CreateOrUpdateKB /p:WorkingDirectory=$(KB_PATH) /p:CreateDbInKbFolder=True
+          $(MSBUILD_EXE) "$(WORKING_DIR)\\AzureCICD.msbuild" -target:CreateOrUpdateKB /p:WorkingDirectory=$(KB_PATH) /p:CreateDbInKbFolder=True
           /p:DbaseName=$(KB_ALIAS) /p:DbaseUseIntegratedSecurity=True /p:ServerUrl=$(GXSERVER_URL) /p:ServerKbAlias=$(KB_ALIAS) 
           /p:ServerUsername=$(GXSERVER_USER) /p:ServerPassword=$(GXSERVER_PASS)
           
