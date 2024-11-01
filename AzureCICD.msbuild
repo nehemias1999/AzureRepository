@@ -56,7 +56,6 @@
 	</Target>
 
 	<Target Name="CreateOrUpdateKB">
-		<Error Message="Failed to import '$(GX_INSTALL_DIR)GeneXus.Tasks.targets'. Try setting the property GX_INSTALL_DIR to an actual GeneXus installation path." Condition=" !Exists('$(GX_INSTALL_DIR)GeneXus.Tasks.targets') " />
 		<ItemGroup>
 			<GXWFile Include="$(WorkingDirectory)\*.gxw"/>
 		</ItemGroup>
