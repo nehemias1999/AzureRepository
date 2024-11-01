@@ -5,7 +5,7 @@
 
 variables:
   #Pipeline config variables:
-  EXEC_AGENT: "Genexus"
+  EXEC_AGENT: "TestAgent"
 
   #Environment variables: 
   MSBUILD_PATH: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin"
