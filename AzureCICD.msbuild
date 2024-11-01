@@ -4,10 +4,10 @@
 		<CreatedKB>1</CreatedKB>
 	</PropertyGroup>
 
-	<Import Project="$(GX_INSTALL_DIR)GeneXus.Tasks.targets" Condition=" Exists('$(GX_INSTALL_DIR)GeneXus.Tasks.targets') "/>	
-	<Import Project="$(GX_INSTALL_DIR)\genexus.server.tasks.targets" Condition=" Exists('$(GX_INSTALL_DIR)GeneXus.Tasks.targets') "/>
-	<Import Project="$(GX_INSTALL_DIR)\Genexus.GAM.Tasks.targets" />
-	<Import Project="$(GX_INSTALL_DIR)\GXtest.targets" />
+	<Import Project="C:\Program Files (x86)\GeneXus\GeneXus18U9\Genexus.Server.Tasks.targets" Condition=" Exists('C:\Program Files (x86)\GeneXus\GeneXus18U9\Genexus.Server.Tasks.targets') "/>	
+	<Import Project="C:\Program Files (x86)\GeneXus\GeneXus18U9\Genexus..Tasks.targets" Condition=" Exists('C:\Program Files (x86)\GeneXus\GeneXus18U9\Genexus.Tasks.targets') "/>
+	<Import Project="C:\Program Files (x86)\GeneXus\GeneXus18U9\Genexus.GAM.Tasks.targets" />
+	<Import Project="C:\Program Files (x86)\GeneXus\GeneXus18U9\GXtest.targets" />
 
 	<PropertyGroup>
 		<!--Input Parameters-->
