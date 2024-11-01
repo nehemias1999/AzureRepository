@@ -9,7 +9,6 @@
 	<Import Project="$(GX_INSTALL_DIR)\Genexus.GAM.Tasks.targets" />
 	<Import Project="$(GX_INSTALL_DIR)\GXtest.targets" />
 
-	
 	<PropertyGroup>
 		<!--Input Parameters-->
 		<DoUpdate>True</DoUpdate>
