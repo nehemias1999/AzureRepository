@@ -8,7 +8,7 @@ variables:
   EXEC_AGENT: "TestAgent"
 
   #Environment variables: 
-  MSBUILD_PATH: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin"
+  MSBUILD_PATH: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin
   GX_PATH: "C:\\Program Files (x86)\\GeneXus\\GeneXus18U9"
   WORKING_DIR: "C:\\Users\\nsalazar\\Documents\\Git\\Azure Pipelines\\AzureRepository"
   KB_PATH: C:\\KBS\\$(KB_ALIAS)
